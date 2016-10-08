@@ -1,0 +1,15 @@
+---
+- hosts: all
+  tasks:
+  - name: ensure apache is at the latest version
+    yum:
+      name: httpd
+      state: latest
+  - name: ensure cloud-init is at the latest version
+    yum:
+      name: cloud-init
+      state: latest
+  - name: install Docker
+    yum:
+      name: docker
+      state: latest
